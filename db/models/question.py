@@ -5,7 +5,6 @@ from datetime import datetime
 class Question(BaseModel):
     question_text: str
     answer: str
-    photo: Optional[str]
 
 class Form(BaseModel):
     form_name: str
@@ -13,3 +12,4 @@ class Form(BaseModel):
     latitude: float
     longitude: float
     datetime: datetime
+    photo: Optional[List[str]] = None  # Nuevo campo para las fotos
